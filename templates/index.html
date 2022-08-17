@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <h1>Doc Slasher</h1>
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2>Please enter a full path to your file and a keyword to omit</h2>
+                <form action="/edit" method="POST">
+                    <input type="text" name="path" id="path" placeholder="File Path">
+                    <input type="text" name="keyword" id="keyword" placeholder="Keyword">
+                    <input type="submit" value="Magic">
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
