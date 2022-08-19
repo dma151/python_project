@@ -1,20 +1,41 @@
-{% extends 'base.html' %}
-
-{% block head %}
-    <h1>Doc Slasher</h1>
-{% endblock %}
-
-{% block body %}
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <h2>Please enter a full path to your file and a keyword to omit</h2>
-                <form action="/edit" method="POST">
-                    <input type="text" name="path" id="path" placeholder="File Path">
-                    <input type="text" name="keyword" id="keyword" placeholder="Keyword">
-                    <input type="submit" value="Magic">
-                </form>
-            </div>
-        </div>
+{% extends 'base.html' %} {% block head %}
+<h1>Doc Slasher</h1>
+{% endblock %} {% block body %}
+<div class="container">
+  <div class="row">
+    <div class="card text-center">
+      <div class="card-body">
+        <h5 class="card-title">Please enter the full path of your file</h5>
+        <p class="card-text">Please enter a keyword (Case-Sensitive)</p>
+        <form action="/edit" method="POST">
+          <input type="text" name="path" id="path" placeholder="File Path" />
+          <input
+            type="text"
+            name="keyword"
+            id="keyword"
+            placeholder="Keyword"
+          />
+          <input type="submit" value="Magic" />
+        </form>
+      </div>
+      <div class="card-footer text-muted">
+        Note: Changes are irreversible, please make sure you enter the keyword
+        exactly
+      </div>
     </div>
+  </div>
+  <div class="row" id="footer">
+    <div>
+      <div>Extra Time? Click to get a quote from Kanye</div>
+      <div>
+        <h5>Kanye</h5>
+        <p>{{ quote }}</p>
+        <form action="/kanye">
+          <input type="submit" value="Inspire Me" />
+        </form>
+      </div>
+      <div>Warning: Explicit language</div>
+    </div>
+  </div>
+</div>
 {% endblock %}
