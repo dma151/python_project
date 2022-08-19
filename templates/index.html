@@ -4,6 +4,34 @@
 <div class="container">
   <div class="row">
     <div class="card text-center">
+        <div class="card-header">
+            .txt files
+        </div>
+      <div class="card-body">
+        <h5 class="card-title">Please enter the full path of your file</h5>
+        <p class="card-text">Please enter a keyword (Case-Sensitive)</p>
+        <form action="/edit" method="POST">
+          <input type="text" name="path" id="path" placeholder="File Path" />
+          <input
+            type="text"
+            name="keyword"
+            id="keyword"
+            placeholder="Keyword"
+          />
+          <input type="submit" value="Magic" />
+        </form>
+      </div>
+      <div class="card-footer text-muted">
+        Note: Changes are irreversible, please make sure you enter the keyword
+        exactly
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="card text-center">
+        <div class="card-header">
+            .pdf files
+        </div>
       <div class="card-body">
         <h5 class="card-title">Please enter the full path of your file</h5>
         <p class="card-text">Please enter a keyword (Case-Sensitive)</p>
